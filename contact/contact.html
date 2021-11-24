@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Ubuntu', sans-serif;
+            text-decoration: none;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        body {
+            color:white;
+            background-color: rgb(255, 255, 255);;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 60px;
+            background:#00fcfc;
+            /* position: fixed; */
+            top: 0;
+            left: 0;
+            padding: 0 25px;
+        }
+
+        .navbar .inner_navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+        }
+
+        .navbar .logo a {
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: 3px;
+            color:aqua;
+        }
+
+        .navbar .logo a span {
+            color: #5bd485;
+        }
+
+        .navbar .menu ul {
+            display: flex;
+        }
+
+        .navbar .menu ul li a {
+            width: 120px;
+            margin-right: 10px;
+            display: block;
+            text-align: center;
+            padding: 10px;
+            border-radius: 25px;
+            color:cyan;
+            text-transform: uppercase;
+            font-size: 20px;
+            letter-spacing: 2px;
+            transition: all 0.2s ease;
+        }
+
+        .navbar .menu ul li:last-child a {
+            margin-right: 0;
+        }
+
+        .navbar .menu ul li a:hover,
+        .navbar .menu ul li a.active {
+            background:rgba(46, 46, 46, 0.973);
+        }
+
+        .main_container {
+            margin-top: 60px;
+            padding: 25px;
+        }
+
+        .main_container .content {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .main_container .content .item_wrap {
+            width: 50%;
+            padding: 10px;
+        }
+
+        .main_container .content .item_wrap .item {
+            padding: 25px;
+            background: #fff;
+            line-height: 22px;
+        }
+
+        @media (max-width: 992px) {
+            .navbar {
+                height: 100px;
+                padding: 12px;
+            }
+
+            .navbar .inner_navbar {
+                flex-direction: column;
+            }
+
+            .main_container {
+                margin-top: 100px;
+            }
+        }
+
+        @media (max-width: 728px) {
+            .navbar {
+                height: 60px;
+            }
+
+            .navbar .inner_navbar {
+                flex-direction: row;
+            }
+
+            .main_container {
+                margin-top: 60px;
+            }
+
+            .navbar .menu ul {
+                position: absolute;
+                top: 60px;
+                left: 0;
+                display: block;
+                background: #090f1b;
+                width: 100%;
+            }
+
+            .navbar .menu ul li {
+                padding: 10px;
+            }
+
+            .navbar .menu ul li a {
+                width: 100%;
+                padding: 12px;
+            }
+
+            
+
+            .navbar .menu {
+                display: none;
+            }
+
+            .navbar .menu.active {
+                display: block;
+            }
+
+            .main_container .content .item_wrap {
+                width: 100%;
+            }
+        }
+
+        @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+        form {
+            max-width: 420px;
+            margin: 50px auto;
+        }
+
+        .feedback-input {
+            color: white;
+            font-family: Helvetica, Arial, sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            border-radius: 5px;
+            line-height: 22px;
+            background-color: transparent;
+            border: 2px solid cyan;
+            transition: all 0.3s;
+            padding: 13px;
+            margin-bottom: 15px;
+            width: 100%;
+            box-sizing: border-box;
+            outline: 0;
+        }
+
+        .feedback-input:focus {
+            border: 2px solid lightcyan;
+        }
+
+        textarea {
+            height: 150px;
+            line-height: 150%;
+            resize: vertical;
+        }
+
+        [type="submit"] {
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+            width: 100%;
+            background: cyan;
+            border-radius: 5px;
+            border: 0;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            transition: all 0.3s;
+            margin-top: -4px;
+            font-weight: 700;
+        }
+
+        [type="submit"]:hover {
+            background: lightcyan;
+        }
+
+        footer {
+            color:black;
+            position: relative;
+            height: 65px;
+            left: 0;
+            bottom: 0;
+            font-size: 14px;
+            background-color: #00fcfc;
+            width: 100%;
+            height: max-content;
+            padding: 15px;
+        }
+
+
+
+
+        .topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+   
+
+    <div class="topnav">
+        <a class="active" href="#index" onclick="location.href='../index.html'">index</a>
+        <a href="#contact" onclick="location.href='contact.html'">Contact</a>
+        <a href="#login" onclick="location.href='../login/login.html'">Login</a>
+    </div>
+
+
+
+
+
+
+
+    <section>
+       
+
+        
+        <form name="myForm" method="post" onsubmit="return submitFun();"  onkeydown="return event.key != 'Enter';">
+            <input name="name" type="text" class="feedback-input" placeholder="Full Name" required/>
+            <input name="mobNum" type="number" class="feedback-input" placeholder="Mobile Number" minlength="10" maxlength="10" required/>
+            <input name="email" type="email" class="feedback-input" placeholder="Email" required/>
+            <textarea name="text" class="feedback-input" placeholder="Message" required></textarea>
+            <br><br>
+            <input type="submit" id="submit"value="SUBMIT" />
+        </form>
+    </section>
+        <footer style="text-align: center;margin-top: 44%;" >
+            <h4>
+                CREATED BY - Vishal Subhash Borse
+            </h4>
+        </footer>  
+</body>
+<script>
+    const submitFun = ()=>{
+        alert('User Registered Successfully');
+    }
+    // document.getElementById('submit').addEventListener('click',(event)=>{
+    //     // event.preventDefault();
+    //     alert('User Registered Successfully');
+    //     // let name = document.getElementsByName('name')[0].value;
+    //     // console.log(name);
+
+    //     // let row = document.createElement('tr');
+    //     // let col1 = document.createElement('td');
+    //     // col1.innerHTML = localStorage.getItem('no') + 1;
+    //     // localStorage.setItem('no',localStorage.getItem('no') + 1);
+    //     // let col2 = document.createElement('td');
+    //     // col2.innerHTML = 'adasd';
+    //     // let col3 = document.createElement('td');
+    //     // col3.innerHTML = row.Link;
+    //     // row.appendChild(col1);
+    //     // row.appendChild(col2);
+    //     // row.appendChild(col3);
+    //     // tbody.appendChild(row);
+    // });
+</script>
+</html>
